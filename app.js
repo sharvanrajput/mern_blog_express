@@ -57,7 +57,7 @@ export const connectDB = async () => {
 await connectDB();
 
 app.get("/", (req, res) => {
-  res.send("Backend is running on vercel check");
+  res.send("Backend is running on vercel ");
 });
 
 // app.listen(port, () => {
