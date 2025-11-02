@@ -49,10 +49,12 @@ export const connectDB = async () => {
   }
 }
 
-app.use((req, res, next) => {
-  if (!isConnected) connectDB()
-  next()
-})
+// app.use((req, res, next) => {
+//   if (!isConnected) connectDB()
+//   next()
+// })
+
+await connectDB();
 
 app.get("/", (req, res) => {
   res.send("Backend is running on vercel check");
