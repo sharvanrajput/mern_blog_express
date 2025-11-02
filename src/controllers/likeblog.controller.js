@@ -45,7 +45,6 @@ export const likesOnBlog = async (req, res) => {
         const bloglike = await BlogLikes.find({ blogid })
 
         const countlike = await BlogLikes.countDocuments({ blogid })
-        console.log(bloglike)
 
         return res.status(200).send({ success: true, message: "all like here", bloglike, likecount: countlike }); // ✅ added return
 
