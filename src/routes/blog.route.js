@@ -9,7 +9,7 @@ blogRotue.post("/add", verifyJwt, upload.single("blogimg"), addBlog)
 
 // get my all blog 
 
-blogRotue.get("/getblog", verifyJwt, getAllBlog)
+blogRotue.get("/getblog", getAllBlog)
 
 // get all user blog 
 blogRotue.get("/getalluserblog", verifyJwt, getAllUsersBlog)
