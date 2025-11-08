@@ -11,4 +11,4 @@ export const connectDB = async () => {
     } catch (error) {
         console.log("db not Connected")
     }
-} 
+}   
