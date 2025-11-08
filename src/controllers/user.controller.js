@@ -23,9 +23,9 @@ export const register = async (req, res) => {
         const token = user.generateAcccessToken()
 
         const options = {
-            httpOnly: false, // allow JS to read
-            secure: false,   // for localhost
-            sameSite: "lax",
+            httpOnly: true, // allow JS to read
+            secure: true,        // true in production (HTTPS)
+            sameSite: "none",
             path: "/"
         }
 
@@ -52,10 +52,10 @@ export const login = async (req, res) => {
 
         const token = user.generateAcccessToken()
 
-        const options = {
-            httpOnly: false, // allow JS to read
-            secure: false,   // for localhost
-            sameSite: "lax",
+       const options = {
+            httpOnly: true, // allow JS to read
+            secure: true,        // true in production (HTTPS)
+            sameSite: "none",
             path: "/"
         }
 
@@ -84,11 +84,12 @@ export const Googlelogin = async (req, res) => {
         const token = user.generateAcccessToken()
 
         const options = {
-            httpOnly: false, // allow JS to read
-            secure: false,   // for localhost
-            sameSite: "lax",
+            httpOnly: true, // allow JS to read
+            secure: true,        // true in production (HTTPS)
+            sameSite: "none",
             path: "/"
         }
+
 
         res.status(200).cookie("token", token, options).send({ success: true, user, token: token, message: "User Login Successfully" })
 
