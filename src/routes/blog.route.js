@@ -12,19 +12,19 @@ blogRotue.post("/add", verifyJwt, upload.single("blogimg"), addBlog)
 blogRotue.get("/getblog", getAllBlog)
 
 // get all user blog 
-blogRotue.get("/getalluserblog", verifyJwt, getAllUsersBlog)
+blogRotue.get("/getalluserblog", getAllUsersBlog)
 
 // get one blog 
 
-blogRotue.get("/getoneblog/:id", verifyJwt, getOneBlog)
+blogRotue.get("/getoneblog/:id", getOneBlog)
 
 // get blog by category 
 
-blogRotue.get("/getoneblog/:category/:slug", verifyJwt, blogByCategory)
+blogRotue.get("/getoneblog/:category/:slug", blogByCategory)
 
 // get by slug blog 
 
-blogRotue.post("/blogbyslug/:slug", verifyJwt, blogBySlug)
+blogRotue.post("/blogbyslug/:slug", blogBySlug)
 
 // current user all blog 
 
