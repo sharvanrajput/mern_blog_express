@@ -9,7 +9,7 @@ const authRoute = Router()
 authRoute.post("/register", upload.single("profile"), register)
 authRoute.post("/login", login)
 authRoute.post("/googlelogin", Googlelogin)
-authRoute.post("/logout", verifyJwt, logout)
+authRoute.post("/logout", logout)
 
 // update password 
 authRoute.post("/forgotPassword", forgotPassword)
