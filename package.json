@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "node app.js",
-    "vercel-build": "node app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",

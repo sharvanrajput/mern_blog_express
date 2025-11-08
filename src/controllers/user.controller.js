@@ -4,7 +4,7 @@ import { uploadOnCloudinary } from "../utils/cloudnary.js";
 
 export const register = async (req, res) => {
     try {
-        const { fullname, email, password  } = req.body
+        const { fullname, email, password } = req.body
 
         if ([fullname, email, password].some((filed) => !filed.trim() === "")) {
             return res.status(400).json({ success: false, message: "All fields are required" })
@@ -16,7 +16,7 @@ export const register = async (req, res) => {
             return res.status(400).json({ success: false, message: "User Already Exist" })
         }
 
-        const user = await User.create({ fullname, email, password  })
+        const user = await User.create({ fullname, email, password })
 
         console.log(user)
 
